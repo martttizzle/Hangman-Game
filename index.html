@@ -5,42 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HangMan</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
-<style>
-
-p {
-    font-size: 30px;
-    text-align: center;
-    border: solid 2px black;
-}
-
-h1 {
-    text-align: center
-    
-}
-
-#test2 {
-    border: solid 2px black;
-   
-    padding-bottom: 10px;
-}
-</style>
 </head>
 <body>
-    <header>
-        <h1>HangMan</h1>
-    </header>
-    <p id=test></p>
-
-    <p id=test2></p>
-
-    
-    <p id="test3"></p>
-
-
+<div class="container-fluid">
+    <div class="row">
+        <header class="col-xl-12 jumbotron">
+        <div class="foo">
+            <h1> 
+                <span class="letter" data-letter="H">H</span> 
+                <span class="letter" data-letter="A">A</span>
+                <span class="letter" data-letter="N">N</span>
+                <span class="letter" data-letter="G">G</span>
+                <span class="letter" data-letter="M">M</span>
+                <span class="letter" data-letter="A">A</span>
+                <span class="letter" data-letter="N">N</span>
+            </h1>
+        </div>
+        </header>
+    </div>
+<div class="borders">
+    <div class="row">
+        <div class="col-md-12">
+            <p></p>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-md-12">
+            <p></p>
+            </div>
+    </div>
+        <div class="row">
+                <div class="col-md-12">
+             <p></p>     
+                </div>
+            </div>
+    <div class="row">
+        <div class="col-md-8">
+        </div>
+        <div class="col-md-4">
+            <p>Current Word</p>
+         <p id="entered"></p>
+        </div>
+    </div>
+    <div class="row">    
+         <div class="col-md-8">
+        </div>
+        <div class="col-md-4">
+         <p>Letters Guessed</p>
+          <p id="wrongL"></p>
+        </div>
+    </div>
+  </div>
+</div> 
 
 <script src="assets/javascript/game.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
-
 </html>
