@@ -130,4 +130,10 @@ div.foo{
     left: 244px;
     bottom: 45px;
   }
- 
+ .ple {
+   color: green;
+   font-style: oblique;
+   font-size: 60px;
+   text-shadow: 2px 2px floralwhite;
+
+ }
