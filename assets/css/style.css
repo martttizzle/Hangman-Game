@@ -23,9 +23,9 @@ p {
     color: white;
 }
 .borders{
-     border:dotted 4px rgb(58, 56, 56);
+     border:dotted 8px rgb(255, 255, 255);
      position: relative;
-     top: 300px;  
+     top: 10px;  
 }
 h1 {
     text-align: center  
@@ -94,3 +94,40 @@ div.foo{
       rotateZ(0deg)
       skew(0deg,22deg);
   }
+   .img{
+    background-image: url("../images/jupiter.jpg");
+    position: relative;
+    left: 20px;
+    /*background-position: -280px -550px;*/
+    background-repeat: no-repeat;
+    width: 320px;
+    height: 350px;
+  }
+
+  .row1 {
+    position: relative;
+    left: 244px;
+    bottom: 50px;   
+  }
+  .row2 {
+    position: relative;
+    left: 244px;
+    bottom: 45px;
+    padding-bottom: 20px;     
+  }
+  .row3 {
+    position: relative;
+    left: 244px;
+    bottom: 45px;     
+  }
+  .row4 {
+    position: relative;
+    left: 249px;
+    bottom: 45px;  
+  }
+  .row5 {
+    position: relative;
+    left: 244px;
+    bottom: 45px;
+  }
+ 

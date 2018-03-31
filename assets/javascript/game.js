@@ -1,14 +1,16 @@
 
-var astronomers = ["GALILEOGALILEI","HIPPARCHUS","EDWINHUBBLE","STEVENHAWKING"];
+var planets = ["MARS","EARTH","JUPITER","NEPTUNE","URANUS","PLUTO","SATURN","MERCURY","VENUS"];
 var underScoreArry =[];//storing the amount of underscores;
 var wrongInpt = [" "]; //the user inputs from keyboard.
+var planetImg = ["../images/mars.jpg","../images/jupiter.jpg","../images/neptune.jpg","../images/uranus.jpg","../images/pluto.jpg","../images/saturn.jpg","../images/mercury.jpg","../images/venus.jpg"]
 //Randomizing the number for array
-var astroPeople = astronomers[Math.floor(Math.random()*astronomers.length)];
-var astrPplSplt = astroPeople.split("");//Putting individual letters in each array indicies. 
-var stringSize = astroPeople.length;
+var plntChsn = planets[Math.floor(Math.random()*planets.length)];
+var plntSplt = plntChsn.split("");//Putting individual letters in each array indicies. 
+var stringSize = plntChsn.length;
 var guessesRemaining = 10; 
+var wins = 0;
  
-// Storing number value of length of astronomers name
+// Storing number value of length of planets name
  underScoreGenerator(stringSize).join("   ");
  
 // Generating underscores and putting in to array. 
@@ -29,11 +31,11 @@ document.onkeyup =  function(event) {
 //Function to check if guess is correct or not.
 
    function checker(guess) {
-     if(astrPplSplt.indexOf(guess) > -1) { 
-        for(var i = 0; i < astrPplSplt.length; i++) {
-            if(astrPplSplt[i] === guess) {
+     if(plntSplt.indexOf(guess) > -1) { 
+        for(var i = 0; i < plntSplt.length; i++) {
+            if(plntSplt[i] === guess) {
                 underScoreArry[i] = guess;
-                var s = astrPplSplt.splice(i, 1, " " );
+                var s = plntSplt.splice(i, 1, " " );
                  document.getElementById("entered").innerHTML = underScoreArry.join(' ');   
                  break;
                 }
@@ -48,8 +50,8 @@ document.onkeyup =  function(event) {
           if(console.log(wrongInpt[i]) !== wrgLtr) {
             wrongInpt.push(wrgLtr);
             document.getElementById("wrongL").innerHTML = wrongInpt.join(' ');
-            guessesRemaining--;
-            winGame();
+            document.getElementById("guessR").innerHTML = guessesRemaining--;
+            lostGame();
             break;
             }
             else{
@@ -57,29 +59,19 @@ document.onkeyup =  function(event) {
             }
         }
     } 
-     function winGame() {
-            if( guessesRemaining < 1) {
+     function lostGame() {
+            if(guessesRemaining <= -1) {
                 alert("GAME OVER!");
-                prompt("Would you like to play again?")
-            }
-     }
+                document.querySelector(".img").style.backgroundImage = planetImg[3];
+                
+            }    
+         }
      
+   
+
 
     
-   // document.getElementById("test4").innerHTML = wrongInpt.join(' ');
-    
-         
-
-
- 
-// document.getElementById("test2").innerHTML = displayUnderScore;
-
-
-
-//  document.getElementById("test3").innerHTML = guess;
-
-//testing onto HTML 
-document.getElementById("test").innerHTML = astroPeople;
+document.getElementById("test").innerHTML = plntChsn;
 //document.getElementById("test3").innerHTML = guesses;
 
 
