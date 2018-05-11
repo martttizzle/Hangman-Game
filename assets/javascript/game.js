@@ -3,6 +3,7 @@ var planets = ["MARS", "EARTH", "JUPITER", "NEPTUNE", "URANUS", "PLUTO", "SATURN
 var underScoreArry = [];//storing the amount of underscores;
 var wrongInpt = [""]; //the user inputs from keyboard.
 var planetImg = ["../images/mars.jpg", "../images/jupiter.jpg", "../images/neptune.jpg", "../images/uranus.jpg", "../images/pluto.jpg", "../images/saturn.jpg", "../images/mercury.jpg", "../images/venus.jpg"];
+var correctLetter = [];
 var guessesRemaining;
 var wins = 0;
 var rmdPlnt;
@@ -39,10 +40,10 @@ document.onkeyup = function (event) {
     var guess = String.fromCharCode(event.keyCode);
     checker(guess);
 }
-debugger;
+ 
 //Function to check if guess is correct or not.
 function checker(guess) {
-   
+
     if (duplicateGuess(guess)) {
         alert("This " + guess + " was already entered!")
     }
@@ -70,6 +71,7 @@ function CorrectGuess(guess) {
                 underScoreArry[i] = guess;
                 var s = plntSplt.splice(i, 1, " ");
                 document.getElementById("entered").innerHTML = underScoreArry.join(' ');
+                gameWon(s);
                 break;
             }
         }
@@ -84,14 +86,30 @@ function CorrectGuess(guess) {
 }
 
 function gameOver(guessesRemaining) {
-        if (guessesRemaining === 0) {
-            alert("game Over");
-             underScoreArry = []; 
-             wrongInpt = [""];
-             document.getElementById("wrongL").innerHTML = wrongInpt.join(' ');
-             wins++;
-             randomPlanet();
-        }
+    if (guessesRemaining === 0) {
+        alert("game Over");
+        underScoreArry = [];
+        wrongInpt = [""];
+        correctLetter= [];
+        document.getElementById("wrongL").innerHTML = wrongInpt.join(' ');
+        randomPlanet();
+    }
+
+}
+
+function gameWon(crtLetter) {
+    var total = correctLetter.push(crtLetter);
+    console.log(stringSize);
+    console.log(total);
+    if (total === stringSize) {
+        alert("You WON!!!");
+        correctLetter=[];
+        underScoreArry = [];
+        wrongInpt = [""];
+        document.getElementById("wrongL").innerHTML = wrongInpt.join(' ');
+        wins++;
+        randomPlanet();
+    }
 
 }
 
