@@ -7,7 +7,6 @@ body{
     background-image: url("../images/stars.jpg"); 
     font-family: 'Lato', sans-serif;
     }
-
 .jumbotron{
     color: green;
     font-size: 90px;
@@ -120,31 +119,24 @@ div.foo{
 
   .row1 {
     position: relative;
-    left: 0px;
-   top: 50px;   
+    left: 10px;
+    top: 20px;   
   }
   .row2 {
     position: relative;
-    left:60px;
-    bottom:-80px;
-    padding-bottom: 40px;     
+    left:150px;
+    bottom:0px;
+    padding-bottom: 180px;     
   }
   .row3 {
     position: relative;
-    left: 0px;
-    bottom:50px;     
+    left:290px;
+    bottom:10px;     
   }
   .row4 {
     position: relative;
-    left: 50px;
-    bottom: 25px;
-    padding-bottom: 30px;  
-   
-  }
-  .row5 {
-    position: relative;
-    left: 50px;
-    bottom: 45px;
+    left:250px;
+    bottom:100px;     
   }
  .ple {
    color: green;
@@ -157,12 +149,15 @@ div.foo{
    font-size: 35px;
  }
  #win{
+   position: relative;
    color: green;
    font-size: 35px;
+   right: 60px;
  }
  #guessR{
    color: yellow;
    font-size: 35px;
+   bottom: 50px;
  }
  #title {
    font-size: 60px;

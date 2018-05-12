@@ -86,7 +86,7 @@ function CorrectGuess(guess) {
 }
 function gameOver(guessesRemaining) {
     if (guessesRemaining === 0) {
-        alert("game Over");
+        alert("You Lost, Play Again");
         underScoreArry = [];
         wrongInpt = [""];
         correctLetter = [];
@@ -105,7 +105,7 @@ function gameWon(crtLetter) {
         document.getElementById('pltIMG').style.backgroundImage = "url(" + planetImg[planets.indexOf(rmdPlnt)] + ")";
         document.getElementById('pltPara').innerHTML = planetParagraph[planets.indexOf(rmdPlnt)];
         document.getElementById('title').innerHTML = title[planets.indexOf(rmdPlnt)];
-        alert("You WON!!!");
+        alert("You've WON!, Try Again");
         correctLetter = [];
         underScoreArry = [];
         wrongInpt = [""];
