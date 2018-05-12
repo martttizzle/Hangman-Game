@@ -2,7 +2,7 @@
 var planets = ["MARS", "EARTH", "JUPITER", "NEPTUNE", "URANUS", "PLUTO", "SATURN", "MERCURY", "VENUS"];
 var underScoreArry = [];//storing the amount of underscores;
 var wrongInpt = [""]; //the user inputs from keyboard.
-var planetImg = ["../images/mars.jpg", "../images/jupiter.jpg", "../images/neptune.jpg", "../images/uranus.jpg", "../images/pluto.jpg", "../images/saturn.jpg", "../images/mercury.jpg", "../images/venus.jpg"];
+var planetImg = ["../Hangman-Game/assets/images/mars.jpg", "../Hangman-Game/assets/images/earth.jpg", "../Hangman-Game/assets/images/jupiter.jpg", "../Hangman-Game/assets/images/neptune.jpg", "../Hangman-Game/assets/images/uranus.jpg", "../Hangman-Game/assets/images/pluto.jpg", "../Hangman-Game/assets/images/saturn.jpg", "../Hangman-Game/assets/images/mercury.jpg", "../Hangman-Game/assets/images/venus.jpg"];
 var correctLetter = [];
 var guessesRemaining;
 var wins = 0;
@@ -10,8 +10,6 @@ var rmdPlnt;
 var plntSplt;
 var stringSize;
 var wins = 0;
-
-
 
 randomPlanet()
 
@@ -33,14 +31,13 @@ function underScoreGenerator(amt) {
     }
     return underScoreArry;
 }
-/*AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
 
 //USER Input from keyboard
 document.onkeyup = function (event) {
     var guess = String.fromCharCode(event.keyCode);
     checker(guess);
 }
- 
+
 //Function to check if guess is correct or not.
 function checker(guess) {
 
@@ -84,75 +81,34 @@ function CorrectGuess(guess) {
 
     }
 }
-
 function gameOver(guessesRemaining) {
     if (guessesRemaining === 0) {
         alert("game Over");
         underScoreArry = [];
         wrongInpt = [""];
-        correctLetter= [];
+        correctLetter = [];
+        document.getElementById('pltIMG').style.backgroundImage = "url(" + planetImg[planets.indexOf(rmdPlnt)] + ")";
         document.getElementById("wrongL").innerHTML = wrongInpt.join(' ');
         randomPlanet();
     }
-
 }
-
 function gameWon(crtLetter) {
     var total = correctLetter.push(crtLetter);
     console.log(stringSize);
     console.log(total);
     if (total === stringSize) {
+        document.getElementById('pltIMG').style.backgroundImage = "url(" + planetImg[planets.indexOf(rmdPlnt)] + ")";
         alert("You WON!!!");
-        correctLetter=[];
+        correctLetter = [];
         underScoreArry = [];
         wrongInpt = [""];
         document.getElementById("wrongL").innerHTML = wrongInpt.join(' ');
         wins++;
         randomPlanet();
     }
-
 }
 
 
 
 
 
-
-
-
-
-
-// 
-//document.getElementById("test").innerHTML = rmdPlnt;
-//document.getElementById("test3").innerHTML = guesses;else{document.querySelector(".img").style.backgroundImage = planetImg[3];
-//function removeAlpabet(guess) {
-//     for (var x = 0; x < alphabet.length; x++) {
-//         if (alphabet[x] === guess && wrongInpt.indexOf(guess) === -1) {
-//             var s = alphabet.splice(x, 1, " ");
-//             wrongInpt.push(s);
-//             document.getElementById("wrongL").innerHTML = wrongInpt.join(' ');
-//             guessesRemaining--;
-//             document.getElementById("guessR").innerHTML = guessesRemaining;
-//             break;
-//         }
-//         else if (alphabet[x] !== guess) {
-//             alert("Not in the alphabet list")
-//         }
-//         else {
-//             alert("already guessed");
-//         }
-//     }
-// }
-
-
-    // else if (plntSplt.indexOf(guess) === -1) {
-    //     for (var u = 0; u < wrongInpt.length; u++) {
-    //         if(wrongInpt[u] === guess ) {
-    //             alert('That letter ' + guess + ' was already used')
-    //             break;     
-    //         }  
-    //     }     
-    // }
-    // else {
-    //      removeAlpabet(guess);
-    //  }

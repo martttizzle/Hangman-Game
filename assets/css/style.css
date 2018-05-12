@@ -94,8 +94,9 @@ div.foo{
       rotateZ(0deg)
       skew(0deg,22deg);
   }
-   .img{
-   /* background-image: url("../images/jupiter.jpg");*/
+   #pltIMG{ 
+       /* background-image: url("../images/uranus.jpg");   */
+      /* background-image: url("../images/earth.jpg");  */
     position: relative;
     left: 20px;
     /*background-position: -280px -550px;*/
