@@ -20,10 +20,11 @@ p {
     font-size: 30px;
     text-align: center; 
     padding: 10px;
+    margin:10px;
     color: white;
 }
 .borders{
-     border:dotted 8px rgb(255, 255, 255);
+     border:dotted 12px rgb(255, 255, 255);
      position: relative;
      top: 10px;  
 }
@@ -94,6 +95,7 @@ div.foo{
       rotateZ(0deg)
       skew(0deg,22deg);
   }
+
    #pltIMG{ 
        /* background-image: url("../images/uranus.jpg");   */
       /* background-image: url("../images/earth.jpg");  */
@@ -103,32 +105,45 @@ div.foo{
     background-repeat: no-repeat;
     width: 320px;
     height: 350px;
+    padding-left: 10px;
+  }
+  #pltPara {
+    padding-top: 80px;
+    color: white;
+    letter-spacing: 1.2px;
+    font-size: 20px; 
+  }
+  #info{
+    margin-top: 20px;
+    border: dotted 12px white;
   }
 
   .row1 {
     position: relative;
-    left: 244px;
-    bottom: 50px;   
+    left: 0px;
+   top: 50px;   
   }
   .row2 {
     position: relative;
-    left: 244px;
-    bottom: 45px;
-    padding-bottom: 20px;     
+    left:60px;
+    top: 70px;
+    padding-bottom: 40px;     
   }
   .row3 {
     position: relative;
     left: 244px;
-    bottom: 45px;     
+    top:70px;     
   }
   .row4 {
     position: relative;
-    left: 249px;
-    bottom: 45px;  
+    left: 50px;
+    bottom: 45px;
+    padding-bottom: 30px;  
+   
   }
   .row5 {
     position: relative;
-    left: 244px;
+    left: 50px;
     bottom: 45px;
   }
  .ple {
@@ -136,5 +151,24 @@ div.foo{
    font-style: oblique;
    font-size: 60px;
    text-shadow: 2px 2px floralwhite;
-
+ }
+ #wrongL {
+   color: red;
+   font-size: 35px;
+ }
+ #win{
+   color: green;
+   font-size: 35px;
+ }
+ #guessR{
+   color: yellow;
+   font-size: 35px;
+ }
+ #title {
+   font-size: 60px;
+   color: purple;
+   text-shadow: white 2px 2px;
+   padding-bottom: 80px;
+   margin-right: 220px;
+   letter-spacing: 2px;
  }

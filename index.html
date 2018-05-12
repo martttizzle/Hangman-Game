@@ -1,86 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HangMan</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-<div class="container">
-    <div class="row">
-        <header class="col-xl-12 jumbotron">
-        <div class="foo">
-            <h1> 
-                <span class="letter" data-letter="H">H</span> 
-                <span class="letter" data-letter="A">A</span>
-                <span class="letter" data-letter="N">N</span>
-                <span class="letter" data-letter="G">G</span>
-                <span class="letter" data-letter="M">M</span>
-                <span class="letter" data-letter="A">A</span>
-                <span class="letter" data-letter="N">N</span>
-            </h1>
+    <div class="container">
+        <div class="row">
+            <header class="col-xl-12 jumbotron">
+                <div class="foo">
+                    <h1>
+                        <span class="letter" data-letter="H">H</span>
+                        <span class="letter" data-letter="A">A</span>
+                        <span class="letter" data-letter="N">N</span>
+                        <span class="letter" data-letter="G">G</span>
+                        <span class="letter" data-letter="M">M</span>
+                        <span class="letter" data-letter="A">A</span>
+                        <span class="letter" data-letter="N">N</span>
+                    </h1>
+                </div>
+                <p class="ple">PLANET EDITION</p>
+            </header>
+            <table>
+                <tr>
+                    <td>Finish the game completely*</td>
+                    <td>Make wrong letters appear once*</td>
+                    <td>Add picture of wins*</td>
+                    <td>increment counter for wins*</td>
+                    <td>Add sound*</td>
+                    <td>add hangman animation*</td>
+
+
+                </tr>
+            </table>
         </div>
-            <p class="ple">PLANET EDITION</p>
-        </header>
-        <table>
-            <tr>
-                <td>Finish the game completely*</td>
-                <td>Make wrong letters appear once*</td>
-                <td>Add picture of wins*</td>
-                <td>increment counter for wins*</td>
-                <td>Add sound*</td>
-                <td>add hangman animation*</td>
-                 
+        <div class="borders">
+            <div class="row">
+
+                <div id="pltIMG" class="col-md-4"></div>
+                <div id="pltPara" class="col-md-8"></div>
+            </div>
+            <div class="row">
                 
-            </tr>
-        </table>
-    </div>
-    <div class="borders"> 
-    <div class="row">
-        <div class="col-md-6 leftrow img-responsive">
-            
-           <div id="pltIMG">
-               
-           </div>
-        </div>
-    </div>
-         <div class="row row1">
-            <div class="col-md-12"> 
-              <p>Press any key to get started!</p>
+                 <p class="col" >CORRECT ANSWER:</p> <p id="title" class="col-4"></p>
+                 
             </div>
         </div>
-        <div class="row row2">
-            <p class="col-md-1">WINS:</p>
-            <p id="win" class="col-md-2"></p>
+        <div id="info">
+            <div class="row row1">
+                <div class="col-md-12">
+                    <p>Press any key to get started!</p>
+                </div>
+            </div>
+            <div class="row row2">
+                <p class="col-md-1">WINS:<p id="win" class="col-md-1"></p></p>
+                
+            </div>
+            <div class="row row3">
+                <div class="col-md-11">
+                    <p>Current Word</p>
+                    <p id="entered"></p>
+                </div>
+            </div>
+            <div class="row row4">
+                <div class="col-md-3">
+                    <p>Letters Guessed: <p id="wrongL"></p></p>
+                   
+                </div>
+            </div>
+
+            <div class="row row5">
+                <div class="col-md-3 ">
+                    <p>Guesses Remaining:<p id="guessR"></p></p>
+                    
+                </div>
+            </div>
         </div>
-        <div class="row row3">
-            <div class="col-md-11">
-             <p>Current Word</p>
-             <p id="entered"></p>
-            </div>   
-        </div>
-        <div class="row row4">
-         <div class="col-md-11">
-            <p>Letters Guessed:</p>
-            <p id="wrongL"></p>
-         </div>
-        </div>
-        
-        <div class="row row5">
-         <div class="col-md-11 ">
-            <p>Guesses Remaining:</p>
-            <p id="guessR"></p>
-         </div>
-        </div>
-    </div>     
-  </div>
-<script src="assets/javascript/game.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </div>
+    <script src="assets/javascript/game.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
