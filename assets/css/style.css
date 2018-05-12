@@ -126,18 +126,18 @@ div.foo{
   .row2 {
     position: relative;
     left:60px;
-    top: 70px;
+    bottom:-80px;
     padding-bottom: 40px;     
   }
   .row3 {
     position: relative;
-    left: 244px;
-    top:70px;     
+    left: 0px;
+    bottom:50px;     
   }
   .row4 {
     position: relative;
     left: 50px;
-    bottom: 45px;
+    bottom: 25px;
     padding-bottom: 30px;  
    
   }
