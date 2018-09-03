@@ -7,46 +7,26 @@ body{
     background-image: url("../images/stars.jpg"); 
     font-family: 'Lato', sans-serif;
     }
-.jumbotron{
-    color: green;
-    font-size: 90px;
-    background-image: url("../images/planets.jpg");
-    background-repeat: no-repeat;
-    background-position: -180px -450px;
-    border: 3px solid rgb(36, 34, 34);
-}
-p {
-    font-size: 30px;
-    text-align: center; 
-    padding: 10px;
-    margin:10px;
-    color: white;
-}
-.borders{
-     border:dotted 12px rgb(255, 255, 255);
-     position: relative;
-     top: 10px;  
-}
+
 h1 {
     text-align: center  
 }
 div.foo{
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-    text-align: center;
   }
   .letter{
     display: inline-block;
     font-weight: 900;
-    font-size: 100px;
+    font-size: 50px;
     margin: 0.2em;
     position: relative;
-    color: rgb(223, 219, 31);
     transform-style: preserve-3d;
     perspective: 400;
     z-index: 1;
     background-image: url("../images/al.jpg");
     background-position: 500px -60px;
+    background-repeat: repeat;
   }
   .letter:before, .letter:after{
     position:absolute;
@@ -95,75 +75,83 @@ div.foo{
       skew(0deg,22deg);
   }
 
-   #pltIMG{ 
-       /* background-image: url("../images/uranus.jpg");   */
-      /* background-image: url("../images/earth.jpg");  */
-    position: relative;
-    left: 20px;
-    /*background-position: -280px -550px;*/
+  .jumbotron{
+    color: green;
+    height: 50%;
+    font-size: 90px;
+    background-image: url("../images/planets.jpg");
     background-repeat: no-repeat;
-    width: 320px;
-    height: 350px;
-    padding-left: 10px;
-  }
-  #pltPara {
-    padding-top: 80px;
-    color: white;
-    letter-spacing: 1.2px;
-    font-size: 20px; 
-  }
-  #info{
-    margin-top: 20px;
-    border: dotted 12px white;
+    background-position: -180px -450px;
+    border: groove 8px rgb(43, 255, 0); 
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;  
+}
+p {
+    font-size: 20px;
+    text-align: center; 
+    padding: 15px;
+    margin:10px;
+    color:rgb(43, 255, 0);
+    font-family: 'Lato', sans-serif;
+}
+   #pltIMG{ 
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
   }
 
-  .row1 {
-    position: relative;
-    left: 10px;
-    top: 20px;   
+  .keystrtMargin {
+    margin-left: 0px;
+    margin-bottom: 0px;
+    color: white;
+    padding: 5px;
+    background-color: black
   }
-  .row2 {
-    position: relative;
-    left:150px;
-    bottom:0px;
-    padding-bottom: 180px;     
+
+  .marginSet{
+    padding-left: 0px;
+    padding-right: 0px; 
   }
-  .row3 {
-    position: relative;
-    left:290px;
-    bottom:10px;     
+
+  .border1{
+      border: groove 8px rgb(43, 255, 0);
+      padding-top:0px; 
   }
-  .row4 {
-    position: relative;
-    left:250px;
-    bottom:100px;     
+
+  .backgroundAll {
+    background-color: rgba(0, 189, 79, 0.178); 
   }
+
  .ple {
    color: green;
    font-style: oblique;
-   font-size: 60px;
+   font-size: 25px;
    text-shadow: 2px 2px floralwhite;
  }
  #wrongL {
    color: red;
-   font-size: 35px;
+   font-size: 30px;
  }
  #win{
    position: relative;
    color: green;
-   font-size: 35px;
-   right: 60px;
+   font-size: 45px;
+   
  }
  #guessR{
    color: yellow;
-   font-size: 35px;
-   bottom: 50px;
+   font-size: 25px;
  }
+
  #title {
-   font-size: 60px;
-   color: purple;
-   text-shadow: white 2px 2px;
-   padding-bottom: 80px;
-   margin-right: 220px;
+   font-size: 20px;
+   color: rgb(255, 251, 0);
+   text-shadow: white 2px 2px 2px;
    letter-spacing: 2px;
  }
+ #pltPara {
+  color: white;
+  letter-spacing: 2px;
+  font-size: 11px; 
+}

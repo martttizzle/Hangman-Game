@@ -13,10 +13,10 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <header class="col-xl-12 jumbotron">
-                <div class="foo">
+    <section>
+        <div class="container">
+            <div class="row">
+                <header class="col-sm-12 foo letter jumbotron">
                     <h1>
                         <span class="letter" data-letter="H">H</span>
                         <span class="letter" data-letter="A">A</span>
@@ -26,52 +26,38 @@
                         <span class="letter" data-letter="A">A</span>
                         <span class="letter" data-letter="N">N</span>
                     </h1>
-                </div>
-                <p class="ple">PLANET EDITION</p>
-            </header>
-            <table>
-                <tr>
-                    <td>work with only letter, no numbers, symbols, etc.. </td>
-                    <td>mobile responsive </td>
-                    <td>Add sound*</td>
-                    <td>add hangman animation*</td>
-
-
-                </tr>
-            </table>
-        </div>
-        <div class="borders">
-            <div class="row">
-                <div id="pltIMG" class="col-md-4"></div>
-                <div id="pltPara" class="col-md-8"></div>
+                    <p class="ple">PLANET EDITION</p>
+                </header>
+                <p class="col-sm-12 border1 keystrtMargin">Press any key to get started!</p>
             </div>
             <div class="row">
-                <p class="col">CORRECT ANSWER:</p>
-                <p id="title" class="col-4"></p>
-            </div>
-        </div>
-        <div id="info">
-            <div class="row row1">
-                <div class="col-md-12">
-                    <p>Press any key to get started!</p>
+                <div class="col-sm-6 border1">
+                    <p style="padding-bottom: 0px;">Correct Answer:</p>
+                    <p id="title"></p>
+                    <p id="pltPara"></p>
+                </div>
+                <div class="col-sm-6 border1">
+                    <div id="pltIMG"></div>
                 </div>
             </div>
+            <!-- bottom row -->
             <div class="row">
-                <div class="col-md-3 row1">
-                    <p class="col-md-3">WINS:<p id="win"></p></p>
+                <!-- Col2 -->
+                <div class="col-sm-6 marginSet border1 backgroundAll">     
+                        <p>Current Word:</p>
+                        <p id="entered"></p>
+                        <p>Letters Guessed:</p>
+                        <p id="wrongL"></p>
+                        <p>Guesses Remaining:</p>
+                        <p id="guessR"></p>
                 </div>
-                <div class="col-md-3 row2">
-                    <p>Letters Guessed:<p id="wrongL"></p></p>
-                </div>
-                <div class="col-md-3 row3">
-                    <p>Guesses Remaining:<p id="guessR"></p></p>
-                </div>
-                <div class="row row4 col-md-6">
-                    <p>Current Word:<p class="col" id="entered"></p></p>
+                <div class="col-sm-6 border1 backgroundAll">
+                   <p>Current Win Streak:</p>
+                   <p id="win"></p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <script src="assets/javascript/game.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
